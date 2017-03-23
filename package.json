@@ -1,0 +1,31 @@
+{
+  "name": "mean-app",
+  "version": "1.0.0",
+  "description": "Mean stack application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khobares/MEAN_application.git"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "author": "Siddharth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khobares/MEAN_application/issues"
+  },
+  "homepage": "https://github.com/khobares/MEAN_application#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
