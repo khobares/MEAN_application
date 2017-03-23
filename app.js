@@ -1,4 +1,6 @@
+//Opening the connection to MongoDB
 require('./api/data/dbconnection.js').open();
+
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -6,6 +8,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./api/routes');
 
+//Seeting the application to run on port 3000
 app.set('port',3000);
 
 //To print HTTP request in console
@@ -14,7 +17,7 @@ app.use(function (req, res, next) {
 	next();
 });
 
-//To get the view
+//To get the static files (the View)
 app.use(express.static(path.join(__dirname, 'public')));
 
 //To parse data from the body of HTTP POST requests,
@@ -24,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended : false }));
 //To get the routes
 app.use('/api',routes);
 
-//Starting the server at port=3000
+//Starting the server
 var server = app.listen(app.get('port'),function() {
 	var port = server.address().port;
 	console.log('Magic happened on port ' + port);
