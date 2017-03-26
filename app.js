@@ -1,5 +1,8 @@
 //Opening the connection to MongoDB
-require('./api/data/dbconnection.js').open();
+// require('./api/data/dbconnection.js').open();
+
+//Opening the connection to Mongoose
+require('./api/data/db.js');
 
 var express = require('express');
 var app = express();
