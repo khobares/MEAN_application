@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 //Url to the database
-var dburl = 'mongodb://localhost:27017/meanhotel';
+var dburl = 'mongodb://localhost:27017/meanhotel/hotels';
 
 //Pluging in global promise library in mongoose promise library
 //to avoid Deprecation Warning
@@ -20,7 +20,7 @@ mongoose.connection.on('disconnected', function () {
 });
 
 //Check if error in connection to MongoDB
-mongoose.connection.on('error', function () {
+mongoose.connection.on('error', function (err) {
 	console.log("Mongoose connected error: "+err);
 });
 

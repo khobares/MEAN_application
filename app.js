@@ -22,10 +22,14 @@ app.use(function (req, res, next) {
 
 //To get the static files (the View)
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/node_modules', express.static(path.join(__dirname, '/node_modules')));
 
 //To parse data from the body of HTTP POST requests,
 //where 'false' allows fetching of String & Arrays
-app.use(bodyParser.urlencoded({ extended : false }));
+// app.use(bodyParser.urlencoded({ extended : false }));
+
+//To parse data from the body of HTTP POST requests, where data is in JSON format
+app.use(bodyParser.json());
 
 //To get the routes
 app.use('/api',routes);

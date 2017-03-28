@@ -4,7 +4,7 @@ var router = express.Router();
 var ctrlHotels = require('../controllers/hotels.controllers.js');
 var ctrlReviews = require('../controllers/review.controllers.js');
 
-//Routing GET requests for hotels
+//Routing requests for hotels
 router
 	.route('/hotels')
 	.get(ctrlHotels.hotelsGetAll)
@@ -17,7 +17,7 @@ router
 	.delete(ctrlHotels.hotelsDeleteOne);
 
 
-//Routing GET requests for reviews
+//Routing requests for reviews
 router
 	.route('/hotels/:hotelId/reviews')
 	.get(ctrlReviews.reviewsGetAll)
