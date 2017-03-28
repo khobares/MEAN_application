@@ -1,16 +1,16 @@
-<h1>{{ vm.hotel.name }} <hotel-rating> stars = "vm.stars"</hotel-rating></h1>
+<h1 style="color:rgb(255,100,30)">{{ vm.hotel.name }} <hotel-rating> stars = "vm.stars"</hotel-rating></h1>
 
-<div class="h4">
-<p class="h5">{{ vm.hotel.location.address}}</p>
+<p class="h4">{{ vm.hotel.location.address}}</p>
 <br/>
+<div class="h4">
 <p>{{ vm.hotel.description }}</p>
 
-<p>This hotel offers the following services:</p>
+<h2 style="color:rgb(255,100,30)">Services</h2>
 <ul>
 	<li ng-repeat="service in vm.hotel.services">{{ service }}</li>
 </ul>
 
-<h2>Reviews</h2>
+<h2 style="color:rgb(255,100,30)">Reviews</h2>
 <ul>
 	<li ng-repeat="review in vm.hotel.reviews">{{ review.name }} says: {{ review.review }}</li>
 </ul>
@@ -19,7 +19,7 @@
 
 <!-- Add review form -->
 <form name="vm.reviewForm" ng-submit="vm.addReview()">
-	<div class="form-group col-xs-3">
+	<div class="form-group col-xs-3" style="color:rgb(255,100,30)">
 	Your name: <input class="form-control" type="text" name="name" required ng-minlength="2" ng-model="vm.name">
 		<div ng-show="vm.reviewForm.name.$dirty && vm.reviewForm.name.$invalid && vm.isSubmitted">
 			<p>Name should be more than 2 characters long.</p>
