@@ -1,3 +1,5 @@
+[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
+
 # MEAN_application
 
 * Developed a web-app which using the Javascript MEAN stack i.e. MongoDB, Express.js, Angular.js, Node.js,
