@@ -1,5 +1,6 @@
-//To set properties for ndoemon like ignore
 {
 	"ignore" : ["public/*"],
 	"verbose": true
 }
+
+//To set properties for ndoemon like ignore

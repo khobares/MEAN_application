@@ -87,7 +87,7 @@ module.exports.hotelsGetAll = function (req, res) {
 			.limit(count)
 			.exec(function (err, hotels) {
 				if (err) {
-					cosol.log("Error finding hotels");
+					console.log("Error finding hotels");
 					res
 						.status(500)
 						.json(err);

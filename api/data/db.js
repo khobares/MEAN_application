@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
 //Url to the database
-var dburl = 'mongodb://localhost:27017/meanhotel/hotels';
+//To connect to local Mongo DB instance.
+// var dburl = 'mongodb://localhost:27017/meanhotel/hotels';
+//To connect to cloud hosted instance of Mongo DB using mLAB
+var dburl = 'mongodb://sidd:sidd123@ds145380.mlab.com:45380/meanhotel'
 
 //Pluging in global promise library in mongoose promise library
 //to avoid Deprecation Warning
@@ -20,9 +23,9 @@ mongoose.connection.on('disconnected', function () {
 });
 
 //Check if error in connection to MongoDB
-mongoose.connection.on('error', function (err) {
-	console.log("Mongoose connected error: "+err);
-});
+// mongoose.connection.on('error', function (err) {
+// 	console.log("Mongoose connected error: "+err);
+// });
 
 //Close connection on SIGINT ('Ctrl+C' in Terminal)
 process.on('SIGINT', function () {

@@ -11,8 +11,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./api/routes');
 
-//Seeting the application to run on port 3000
+//Setting the application to run on port 3000
 app.set('port',3000);
+
 
 //To print HTTP request in console
 app.use(function (req, res, next) {
