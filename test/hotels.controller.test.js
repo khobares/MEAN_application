@@ -24,7 +24,7 @@ describe("Test Hotel API", function () {
   });
 
   it('Test GET Hotel by ID', function(done){
-    request.get('http://localhost:3000/api/hotels/58d42f001384d35d8c201bbc', function(err, res, body){
+    request.get('http://localhost:3000/api/hotels/58d42efe3c02fec97ca93c9c', function(err, res, body){
         expect(res.statusCode).to.equal(200);
         done();
       });
@@ -32,14 +32,14 @@ describe("Test Hotel API", function () {
 
 
   it('Test GET Hotel by ID (Invalid ID)', function(done){
-    request.get('http://localhost:3000/api/hotels/58d42f001384d35d8c201bbca', function(err, res, body){
+    request.get('http://localhost:3000/api/hotels/58d42efe3c02fec97ca93c9zz', function(err, res, body){
         expect(res.statusCode).to.equal(500);
         done();
     });
   });
 
   it('Test GET Hotel by ID (ID doesnot exist)', function(done){
-    request.get('http://localhost:3000/api/hotels/58d42f001384d35d8c202bbc', function(err, res, body){
+    request.get('http://localhost:3000/api/hotels/58d42efe3c02fec97ca93c2c', function(err, res, body){
         expect(res.statusCode).to.equal(404);
         done();
     });
